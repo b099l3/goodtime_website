@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://goodtimerunning.co.uk/sitemap.xml

@@ -1,0 +1,227 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'League Spartan';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: optional;
+  src: url(/fonts/LeagueSpartan-VariableFont_wght.ttf) format('tff');
+}
+
+::selection {
+  background-color: #4877f5;
+  color: #fefefe;
+}
+
+html {
+  min-width: 360px;
+  scroll-behavior: smooth;
+}
+
+.prose .anchor {
+  @apply absolute invisible no-underline;
+
+  margin-left: -1em;
+  padding-right: 0.5em;
+  width: 80%;
+  max-width: 700px;
+  cursor: pointer;
+}
+
+.anchor:hover {
+  @apply visible;
+}
+
+.prose a {
+  @apply transition-all decoration-neutral-400 dark:decoration-neutral-600 underline-offset-2 decoration-[0.1em];
+}
+
+.prose .anchor:after {
+  @apply text-white ;
+  content: '#';
+}
+
+.prose *:hover > .anchor {
+  @apply visible;
+}
+
+#__next {
+  @apply bg-goodtime-blue2;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* https://seek-oss.github.io/capsize/ */
+.capsize::before {
+  content: '';
+  margin-bottom: -0.098em;
+  display: table;
+}
+
+.capsize::after {
+  content: '';
+  margin-top: -0.219em;
+  display: table;
+}
+
+.skip-nav {
+  @apply absolute px-4 py-3 transition-transform duration-200 transform -translate-y-12 -left-1/4 focus:top-4 focus:translate-y-3 -top-8;
+}
+
+#skip {
+  scroll-margin-top: 1.125rem;
+}
+
+@supports not (backdrop-filter: none) {
+  .sticky-nav {
+    backdrop-filter: none;
+    @apply bg-opacity-100;
+  }
+}
+
+.prose pre {
+  padding: 0em;
+  font-family: 'League Spartan';
+  font-size: medium;
+  font: 400;
+}
+
+
+.parentDiv {
+  position: relative
+}
+
+.copyButton {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  padding: 6px;
+  margin: 0;
+  font-size: 18px;
+  background: transparent;
+  border: none transparent;
+  color: black;
+  cursor: pointer;
+}
+  .copyButton button {
+    border: none transparent; }
+  .copyButton:focus {
+    outline: 0;
+    color: yellow; }
+  .copyButton:hover {
+    color: blue; }
+
+.prose *:hover > .anchor {
+  @apply visible;
+}
+
+
+.prose img {
+  /* Don't apply styles to next/image */
+  @apply m-0;
+}
+
+
+pre::-webkit-scrollbar {
+  display: none;
+}
+
+pre {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+
+/* Remove Safari input shadow on mobile */
+input[type='text'],
+input[type='email'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.metric-card > a {
+  @apply no-underline;
+}
+
+.metric-card > p {
+  @apply my-2;
+}
+
+.step > h3 {
+  @apply my-0;
+}
+
+ .tweet a {
+  text-decoration: inherit;
+  font-weight: inherit;
+}
+
+table {
+  display: block;
+  max-width: fit-content;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.image-column > div {
+  margin: 0 auto;
+}
+
+.bg-gradient-stripes {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 10px,
+    rgba(0, 0, 0, 1) 10px,
+    rgba(0, 0, 0, 1) 20px
+  );
+}
+
+
+.btn-hover-effect {
+  @apply relative;
+}
+
+
+.btn-hover-effect::before,
+.btn-hover-effect::after,
+.btn-hover-effect-border::before,
+.btn-hover-effect-border::after {
+  @apply absolute inset-0 border-current content-[''] duration-200;
+}
+
+/* Setup Top */
+.btn-hover-effect::before {
+  @apply transition-all origin-top-right scale-x-0 border-t-2;
+}
+
+/* Setup Bottom */
+.btn-hover-effect::after {
+  @apply transition-all origin-bottom-left scale-x-0 border-b-2;
+}
+
+/* Setup Left */
+.btn-hover-effect-border::before {
+  @apply transition-all delay-200 origin-top-left scale-y-0 border-l-2;
+}
+
+/* Setup Right */
+.btn-hover-effect-border::after {
+  @apply transition-all delay-200 origin-bottom-right scale-y-0 border-r-2;
+}
+
+/* Hover X */
+.btn-hover-effect:hover::before,
+.btn-hover-effect:hover::after {
+  @apply scale-x-100;
+}
+
+/* Hover Y */
+.btn-hover-effect:hover .btn-hover-effect-border::before,
+.btn-hover-effect:hover .btn-hover-effect-border::after {
+  @apply scale-y-100;
+}

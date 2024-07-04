@@ -1,0 +1,53 @@
+{
+  "new category": {
+    "prefix": [
+      "newcat",
+    ],
+    "body": [
+      "---",
+      "title: '${1:title}'",
+      "---",
+      "",
+      "${2:description}",
+      "Add the colors in components/Category.tsx",
+      "",
+
+    ],
+    "description": "new category"
+  },
+  "new blog post": {
+    "prefix": [
+      "newpost",
+    ],
+    "body": [
+      "---",
+      "title: '${1:title}'",
+      "publishedAt: '$CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE'",
+      "summary: '${2:summary}'",
+      "image: '/static/images/$TM_FILENAME_BASE/banner.webp'",
+      "categories: ['${3|flutter|}']",
+      "---",
+      "",
+      "${4:content}",
+      "",
+
+    ],
+    "description": "new blog post"
+  },
+  "New event": {
+    "prefix": [
+      "newevent",
+    ],
+    "body": [
+      "---",
+      "title: '${1:title}'",
+      "description: '${2:description}'",
+      "logo: '${3|running|}'",
+      "---",
+      "",
+      "${4:content}",
+      "",
+    ],
+    "description": "new code event"
+  },
+}
