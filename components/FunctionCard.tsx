@@ -1,4 +1,4 @@
-import { faBeerMugEmpty, faPersonRunning, faPizzaSlice } from '@fortawesome/free-solid-svg-icons';
+import { faBeerMugEmpty, faOm, faPersonRunning, faPizzaSlice } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
 
@@ -18,6 +18,8 @@ export default function FunctionCard({
         return faBeerMugEmpty;
       case 'pizza':
         return faPizzaSlice;
+        case 'yoga':
+          return faOm;
       default:
         return faPersonRunning;
     }

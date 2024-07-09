@@ -1,10 +1,10 @@
-import BlogPost from 'components/BlogPost';
-import Container from 'components/Container';
-import type { Blog, Category as BlogCategory } from 'contentlayer/generated';
-import { allBlogs, allCategories } from 'contentlayer/generated';
-import { pick } from 'lib/utils';
 import { InferGetStaticPropsType } from 'next';
-import { Suspense, useState } from 'react';
+import React, { Suspense, useState } from 'react';
+import type { Blog, Category as BlogCategory } from '../.contentlayer/generated';
+import { allBlogs, allCategories } from '../.contentlayer/generated';
+import BlogPost from '../components/BlogPost';
+import Container from '../components/Container';
+import { pick } from '../lib/utils';
 
 export interface BlogWithCategories extends Blog {
   postCategories: BlogCategory[];

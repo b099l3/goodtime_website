@@ -1,6 +1,6 @@
-import Container from 'components/Container';
 import Image from 'next/image';
-import runnerLogo from 'public/runner-logo.webp';
+import Container from '../components/Container';
+import logo from '../public/runner-logo.webp';
 
 
 export default function About() {
@@ -45,9 +45,8 @@ Checkout our events!
             <a href="/runner-logo.webp">
               <Image
                 alt="logo"
-                width={400}
                 quality={400}
-                src={runnerLogo}
+                src={logo}
                 className="rounded-md"
               />
             </a>

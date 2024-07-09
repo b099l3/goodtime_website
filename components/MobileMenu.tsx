@@ -1,6 +1,6 @@
 import cn from 'classnames';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from 'styles/mobile-menu.module.css';
 import useDelayedRender from 'use-delayed-render';
 
@@ -61,21 +61,13 @@ export default function MobileMenu() {
             className="px-10 text-sm font-semibold text-white"
             style={{ transitionDelay: '175ms' }}
           >
-          <Link href="/blog">
-            <a className="flex w-auto pb-4">Blog</a>
-          </Link>
-          </li>
-          <li
-            className="px-10 text-sm font-semibold text-white"
-            style={{ transitionDelay: '200ms' }}
-          >
             <Link href="/events">
               <a className="flex w-auto pb-4">Events</a>
             </Link>
           </li>
           <li
             className="px-10 text-sm font-semibold text-white"
-            style={{ transitionDelay: '250ms' }}
+            style={{ transitionDelay: '200ms' }}
           >
             <Link href="/about">
               <a className="flex w-auto pb-4">About</a>

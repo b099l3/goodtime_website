@@ -3,6 +3,7 @@ import fetcher from 'lib/fetcher';
 import { Views } from 'lib/types';
 import Link from 'next/link';
 import { BlogWithCategories } from 'pages/blog';
+import React from 'react';
 import useSWR from 'swr';
 import Category from './Category';
 

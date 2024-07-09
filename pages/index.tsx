@@ -1,7 +1,6 @@
 import { Suspense } from 'react';
 
 import Link from 'next/link';
-import BlogPostCard from '../components/BlogPostCard';
 import Container from '../components/Container';
 import EventCard from '../components/EventCard';
 import ImageCenter from '../components/ImageCenter';
@@ -24,7 +23,7 @@ export default function Home() {
                 priority={true}
               />
               <h2 className="my-8 tracking-tight text-center text-white text-l md:text-xl">
-                All inclusive, all abilities, all good.
+                ALL INCLUSIVE, ALL ABILITIES, ALL GOOD.
               </h2>
             </div>
           </div>
@@ -37,16 +36,14 @@ export default function Home() {
               slug=""
               gradient="from-[#9333EA] via-[#3B82F6] to-[#6EE7B7]"
             />
-            <BlogPostCard
+            <EventCard
               title="Weekly Runs"
-              categories="Flutter"
-              slug="flutter-hackathon-hack20"
+              slug=""
               gradient="from-[#123062] to-[#123062]"
             />
-            <BlogPostCard
+            <EventCard
               title="Yoga for Runners"
-              categories="Flutter"
-              slug="flutter-declarative-ui-toolkit"
+              slug="yoga-for-runners"
               gradient="from-[#194039] to-[#194039]"
             />
           </div>

@@ -1,8 +1,8 @@
-import { faBeerMugEmpty, faPersonRunning, faPizzaSlice } from '@fortawesome/free-solid-svg-icons';
+import { faBeerMugEmpty, faOm, faPersonRunning, faPizzaSlice } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Container from 'components/Container';
-import type { Event } from 'contentlayer/generated';
 import type { PropsWithChildren } from 'react';
+import type { Event } from '../.contentlayer/generated';
+import Container from '../components/Container';
 
 
 export default function EventLayout({
@@ -18,6 +18,8 @@ export default function EventLayout({
         return faBeerMugEmpty;
       case 'pizza':
         return faPizzaSlice;
+        case 'yoga':
+          return faOm;
       default:
         return faPersonRunning;
     }
