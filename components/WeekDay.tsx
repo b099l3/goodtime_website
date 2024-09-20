@@ -12,8 +12,8 @@ export default function WeekDay({ dayName, events=[]}) {
       {/* Render the list of events */}
       <div className="flex-col flex-grow gap-4">
         {events.map((eventItem, index) => (
-          <a href={`${eventItem.link}`} className="group">
-          <div key={index} className="flex flex-row items-start gap-5">
+          <a key={index} href={`${eventItem.link}`} className="group">
+          <div className="flex flex-row items-start gap-5">
           <div className="flex flex-col flex-auto items-right">
             <h4 className="flex-auto text-lg font-medium tracking-tight text-left text-white group-hover:text-slate-300 ">
               {eventItem.event || ""} 
