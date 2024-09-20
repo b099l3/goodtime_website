@@ -1,5 +1,4 @@
 import { Head, Html, Main, NextScript } from 'next/document';
-import React from 'react';
 
 export default function Document(props) {
   if (process.env.NODE_ENV === 'production') {
@@ -48,7 +47,7 @@ export default function Document(props) {
         />
         <meta content="7081e8ebb22b592f" name="yandex-verification" />
       </Head>
-      <body className="antialiased text-white bg-white dark:bg-slate-900">
+      <body className="antialiased text-white bg-goodtime-blue2">
         <Main />
         <NextScript />
       </body>

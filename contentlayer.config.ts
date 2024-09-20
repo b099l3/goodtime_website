@@ -1,7 +1,7 @@
 import {
-    ComputedFields,
-    defineDocumentType,
-    makeSource
+  ComputedFields,
+  defineDocumentType,
+  makeSource
 } from 'contentlayer/source-files';
 import readingTime from 'reading-time';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
@@ -14,20 +14,6 @@ import remarkMdxCodeMeta from 'remark-mdx-code-meta';
 
 const computedFields: ComputedFields = {
   readingTime: { type: 'json', resolve: (doc) => readingTime(doc.body.raw) },
-  wordCount: {
-    type: 'number',
-    resolve: (doc) => doc.body.raw.split(/\s+/gu).length
-  },
-  tweetIds: {
-    type: 'json',
-    resolve: (doc) => {
-      const tweetMatches = doc.body.raw.match(
-        /<StaticTweet\sid="[0-9]+"\s\/>/g
-      );
-      const tweetIDs = tweetMatches?.map((tweet) => tweet.match(/[0-9]+/g)[0]);
-      return tweetIDs ?? [];
-    }
-  },
   slug: {
     type: 'string',
     resolve: (doc) => doc._raw.sourceFileName.replace(/\.mdx$/, '')
@@ -78,6 +64,8 @@ const Event = defineDocumentType(() => ({
   fields: {
     title: { type: 'string', required: true },
     description: { type: 'string', required: true },
+    distance: { type: 'list', of: { type: 'string' }, required: true },
+    time: { type: 'list', of: { type: 'string' }, required: true },
     logo: { type: 'string', required: true }
   },
   computedFields

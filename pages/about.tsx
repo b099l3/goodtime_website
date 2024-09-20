@@ -42,10 +42,10 @@ Checkout our events!
           </p>
           <h2 className="text-white">Logo</h2>
           <div className="flex space-x-8">
-            <a href="/runner-logo.webp">
+            <a href={logo.src}>
               <Image
                 alt="logo"
-                quality={400}
+                quality={100}
                 src={logo}
                 className="rounded-md"
               />

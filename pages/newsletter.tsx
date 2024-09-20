@@ -15,9 +15,7 @@ export default function Newsletter({ newsletters }) {
           Newsletter
         </h1>
         <p className="mb-4 text-gray-600 dark:text-gray-400">
-          My newsletter provides a behind-the-scenes look into what I'm working
-          on and writing about. I frequently share some of my favorite articles
-          I've read, as well as anything fascinating about technology.
+          This newsletter provides a 
         </p>
         <Subscribe />
         <h3 className="mt-8 mb-4 text-2xl font-bold tracking-tight text-white md:text-4xl">
