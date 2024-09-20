@@ -5,7 +5,7 @@ import { useTheme } from 'next-themes';
 import Head from 'next/head';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
 function NavItem({ href, text }) {
@@ -82,7 +82,7 @@ export default function Container(props) {
       </div>
       <main
         id="skip"
-        className="flex flex-col justify-center px-8 bg-goodtime-blue2 "
+        className="flex flex-col px-4 sm:px-2 bg-goodtime-blue2 "
       >
         {children}
         <Footer />
